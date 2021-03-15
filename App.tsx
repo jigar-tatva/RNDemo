@@ -14,6 +14,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './src/screens/home';
 import TodoScreen from './src/screens/todo';
+import { ThemeScreen } from './src/screens/theme/theme';
 
 interface TaskProps {
   task: string;
@@ -31,6 +32,7 @@ const App = () => {
     <Stack.Navigator screenOptions={{cardStyle:{backgroundColor:'white'}}}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Todo" component={TodoScreen} />
+        <Stack.Screen name="Theme" component={ThemeScreen} />
       </Stack.Navigator>
   </NavigationContainer>);
 };

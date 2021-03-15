@@ -11,6 +11,10 @@ const Home: React.FC<HomeProps> = (props) => {
     {
       title : 'Todo',
       page:'Todo',
+    },
+    {
+      title : 'Theme',
+      page:'Theme',
     }
   ]
 
