@@ -9,7 +9,11 @@
  */
 
 import React, {FC} from 'react';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import Home from './src/screens/home';
+import TodoScreen from './src/screens/todo';
 
 interface TaskProps {
   task: string;
@@ -19,8 +23,16 @@ export interface initState {
   todoList: any[];
 }
 
-const App: FC<TaskProps & initState> = (props) => {
-  return <Home {...props} />;
+const Stack = createStackNavigator();
+
+const App = () => {
+  return (
+  <NavigationContainer>
+    <Stack.Navigator screenOptions={{cardStyle:{backgroundColor:'white'}}}>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Todo" component={TodoScreen} />
+      </Stack.Navigator>
+  </NavigationContainer>);
 };
 
 export default App;
