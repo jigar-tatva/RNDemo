@@ -1,0 +1,9 @@
+
+
+#root
+node_modules
+package-lock.json
+.DS_Store
+/ios/.DS_Store
+/ios/Pods/.DS_Store
+ios/Podfile.lock
